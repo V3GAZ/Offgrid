@@ -1,0 +1,20 @@
+#entry-screen { position:fixed; inset:0; width:100%; max-width:none; height:100%; max-height:none; margin:0; border:0; padding:24px; overflow:hidden; background:#020202; color:#f6f3ec; opacity:1; transition:opacity 650ms cubic-bezier(.22,1,.36,1); }
+#entry-screen::backdrop { background:#020202; }
+#entry-screen::before { content:''; position:absolute; inset:0; background:linear-gradient(#0005,#0002),url('assets/entry-light.webp') center/cover no-repeat; opacity:.7; pointer-events:none; }
+#entry-screen .entry-content { position:absolute; width:calc(100% - 48px); left:24px; top:53%; transform:translateY(-50%); text-align:center; }
+#entry-title { margin:0; font:700 clamp(54px,7vw,117px)/1 Montserrat,sans-serif; letter-spacing:-.045em; animation:entry-arrive 900ms 80ms both; }
+#entry-subtitle { display:flex; gap:38px; justify-content:center; align-items:center; margin:26px 0 0; font:400 clamp(11px,1.2vw,20px)/1.5 Montserrat,sans-serif; letter-spacing:.52em; animation:entry-arrive 900ms 180ms both; }
+#entry-subtitle::before,#entry-subtitle::after { content:''; width:44px; height:1px; background:#d6b66c; }
+#enter-portfolio { display:inline-flex; align-items:center; justify-content:center; gap:32px; width:min(486px,100%); min-height:76px; margin-top:56px; padding:16px 24px; border:1px solid #dfbf72; border-radius:99px; background:#0006; font:700 clamp(12px,1.25vw,21px)/1.4 Montserrat,sans-serif; letter-spacing:.12em; animation:entry-arrive 850ms 420ms both; transition:background 250ms,border-color 250ms; }
+#enter-portfolio span { color:#eac781; font-size:30px; font-weight:400; }
+#enter-portfolio:hover { background:#b58a2012; border-color:#ffe4a5; }
+#entry-screen.is-leaving { opacity:0; pointer-events:none; }
+html.entry-active { overflow:hidden; }
+@keyframes entry-arrive { from { opacity:0; translate:0 7px; } to { opacity:1; translate:0 0; } }
+@media(max-width:700px){#entry-subtitle{gap:18px;letter-spacing:.35em;margin-top:22px}#entry-subtitle::before,#entry-subtitle::after{width:24px}#enter-portfolio{min-height:58px;margin-top:40px;gap:18px}#entry-screen::before{background-position:62% center;opacity:.5}}
+@media(prefers-reduced-motion:reduce){#entry-screen,#entry-title,#entry-subtitle,#enter-portfolio{animation:none;transition:none}}
+/* Harmonize the two existing light fields without altering any layout. */
+.aloeglow-stage::before { mask-image:linear-gradient(transparent,#000 180px,#000 calc(100% - 250px),transparent); }
+.project-content::before { height:100%; max-height:650px; background-position:80% 15%; background-size:125% auto; opacity:.38; mask-image:linear-gradient(transparent,#000 18%,#000 50%,transparent 95%); }
+.archive-teaser::before { transform:scaleX(-1); background-position:25% 35%; background-size:120% auto; opacity:.52; mask-image:linear-gradient(transparent,#000 35%,#000 70%,transparent); }
+@media(max-width:700px){.project-content::before{max-height:1100px;background-size:auto 100%;background-position:75% center}.archive-teaser::before{background-size:auto 650px;background-position:20% 38%}}

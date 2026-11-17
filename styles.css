@@ -1,0 +1,75 @@
+@font-face{font-family:Montserrat;src:url('assets/montserrat-normal-400.ttf') format('truetype');font-weight:400;font-display:swap}
+@font-face{font-family:DM Sans;src:url('assets/dm-sans-400.ttf') format('truetype');font-weight:400;font-display:swap}
+@font-face{font-family:DM Sans;src:url('assets/dm-sans-700-italic.ttf') format('truetype');font-weight:700;font-style:italic;font-display:swap}
+@font-face{font-family:Montserrat;src:url('assets/montserrat-normal-500.ttf') format('truetype');font-weight:500;font-display:swap}
+@font-face{font-family:Montserrat;src:url('assets/montserrat-normal-700.ttf') format('truetype');font-weight:700;font-display:swap}
+:root{color-scheme:dark;font-family:Montserrat,sans-serif;color:#f6f3ec;background:#080706;--ease:cubic-bezier(.22,1,.36,1)}
+*{box-sizing:border-box}
+body{margin:0}
+button,a{-webkit-tap-highlight-color:transparent}
+button{font:inherit;color:inherit;border:0;cursor:pointer;background:none}
+a{color:inherit;text-decoration:none}
+button:focus-visible,a:focus-visible{outline:2px solid #edd3bb;outline-offset:7px}
+.hero{position:relative;min-height:100svh;height:100dvh;display:grid;place-items:center;isolation:isolate}
+.backdrop{position:absolute;inset:0;z-index:-1;background:#080706 url('assets/background.png') center/cover no-repeat;animation:fade 700ms both}
+/* A proportionally scaled 1672 × 941 reference canvas keeps desktop content
+   within the viewport without hiding page overflow. */
+.composition{position:relative;width:min(100vw,177.6833dvh);aspect-ratio:1672/941;container-type:inline-size}
+.header{position:absolute;top:3.6%;left:5.5%;right:4.9%;display:flex;align-items:center;justify-content:space-between;animation:arrive 650ms 100ms both var(--ease)}
+.brand{display:flex;align-items:center;gap:2.8cqw;white-space:nowrap}
+.wordmark{font-weight:700;font-size:2.16cqw;line-height:1;letter-spacing:-.08cqw}
+.brand-divider{width:1px;height:1.4cqw;background:#a6a29e}
+.brand-caption,nav button{font-size:.84cqw;letter-spacing:.18cqw;font-weight:500}
+nav{display:flex;gap:4.45cqw;align-items:center}
+nav button{padding:.5cqw 0;position:relative;color:#e6e2de;transition:color 300ms}
+nav button::after{content:"";position:absolute;bottom:0;left:0;width:100%;height:1px;background:#eee4d9;transform:scaleX(0);transform-origin:left;transition:transform 300ms var(--ease)}
+nav button:hover{color:#fff9ee}
+nav button:hover::after{transform:scaleX(1)}
+.copy{position:absolute;left:7.8%;top:21.65%;z-index:2;width:23%}
+h1{font-family:DM Sans,sans-serif;font-size:5.1cqw;line-height:.86;font-weight:400;letter-spacing:-.21cqw;margin:0}
+h1>span{display:block;width:max-content;transform:scaleX(1.32);transform-origin:left;animation:headline 800ms both var(--ease)}
+h1>span:nth-child(1){animation-delay:180ms;transform:scaleX(1.43)}
+h1>span:nth-child(2){animation-delay:260ms;transform:scaleX(1.465)}
+h1>span:nth-child(3){animation-delay:340ms;transform:scaleX(1.40);white-space:nowrap}
+h1 em{display:inline-block;font-weight:700;font-style:italic;letter-spacing:-.16cqw;transform:skewX(-10deg) scaleX(1.15);transform-origin:left}
+.services{font-size:.79cqw;font-weight:500;line-height:1.75;letter-spacing:.23cqw;margin:2.04cqw 0 0 .85cqw;animation:arrive 800ms 420ms both var(--ease)}
+.explore{position:relative;margin-left:.35cqw;margin-top:2.5cqw;width:19.05cqw;height:3cqw;padding:0 1.6cqw 0 2.05cqw;border:1px solid #ada397;border-radius:100px;display:flex;align-items:center;justify-content:space-between;font-size:.82cqw;letter-spacing:.135cqw;font-weight:500;box-shadow:1px -1px 0 #e8c9b6;transition:border-color 300ms,box-shadow 300ms;animation:arrive 800ms 490ms both var(--ease)}
+.explore::before{content:"";position:absolute;right:1.2cqw;top:-2px;width:1cqw;height:2px;background:#ffede0;box-shadow:0 0 8px 3px #d2a78a80;border-radius:50%;transition:right 600ms var(--ease)}
+.explore svg{width:1.95cqw;fill:none;stroke:currentColor;stroke-width:1;transition:transform 300ms var(--ease)}
+.explore:hover{border-color:#ffead9;box-shadow:0 0 14px #d5ad8e18}
+.explore:hover::before{right:70%}
+.explore:hover svg{transform:translateX(3px)}
+/* The approved original image and its geometry stay unchanged.
+   Pointer motion is owned exclusively by the spring in app.js. */
+.portfolio-arrival{position:absolute;left:14.35%;top:12%;width:80.2%;animation:arrive 1000ms 300ms both var(--ease)}
+.portfolio{display:block;padding:0;width:100%;transform-origin:65% 100%}
+.portfolio img{display:block;width:100%;height:auto;object-fit:contain;user-select:none}
+.scroll-cue{position:absolute;left:51.9%;bottom:2.65%;display:grid;justify-items:center;gap:.7cqw;font-size:.5cqw;letter-spacing:.12cqw;animation:fade 800ms 650ms both}
+.scroll-cue svg{width:1.65cqw;fill:none;stroke:currentColor;stroke-width:1}
+dialog{position:fixed;inset:0;max-width:min(540px,calc(100vw - 32px));padding:52px 42px 36px;background:#12100e;color:#f6f3ec;border:1px solid #75675a;border-radius:18px;box-shadow:0 24px 100px #0009}
+dialog::backdrop{background:#0009;backdrop-filter:blur(5px)}
+dialog[open]{animation:arrive 350ms var(--ease)}
+.close{position:absolute;right:15px;top:10px;width:36px;height:36px;font-size:28px;font-weight:400}
+.panel-eyebrow{font-size:10px;letter-spacing:2px;color:#c4b5a7}
+dialog h2{font-size:38px;font-weight:400;letter-spacing:-1px;margin:26px 0 18px}
+#panel-copy{font-size:14px;line-height:1.8;color:#c5bfb8}
+.panel-back{margin-top:24px;padding:12px 0;font-size:10px;letter-spacing:1.8px}
+.panel-back span{margin-left:22px}
+@media(max-width:700px) and (orientation:portrait){
+ .hero{height:auto;min-height:100dvh;display:block}
+ .composition{width:100%;aspect-ratio:auto;min-height:100dvh;display:flex;flex-direction:column;padding:26px 24px 0}
+ .header{position:relative;inset:auto;display:flex;flex-wrap:wrap;gap:30px}
+ .brand{gap:16px}.wordmark{font-size:26px;letter-spacing:-1px}.brand-divider{height:20px}.brand-caption{font-size:10px;letter-spacing:1.4px}
+ nav{width:100%;justify-content:space-between;gap:24px}nav button{font-size:10px;letter-spacing:1.8px;padding:7px 0}
+ .copy{position:relative;left:auto;top:auto;width:100%;margin:52px 0 0 5px}
+ h1{font-size:clamp(54px,14vw,84px);letter-spacing:-3px;line-height:.92}h1>span:nth-child(n){transform:scaleX(1.13)}h1 em{letter-spacing:-3px}
+ .services{font-size:10px;letter-spacing:2px;line-height:1.9;margin:28px 0 0 2px}
+ .explore{margin-top:26px;width:280px;max-width:100%;height:46px;padding:0 24px;font-size:10px;letter-spacing:1.4px}.explore svg{width:27px}.explore::before{right:22px;width:14px}
+ .portfolio-arrival{position:relative;left:auto;top:auto;width:calc(100% + 48px);margin:26px -24px 0}
+ .scroll-cue{display:none}
+ dialog{padding:48px 26px 28px}
+}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@keyframes arrive{from{opacity:0;translate:0 10px}to{opacity:1;translate:0 0}}
+@keyframes headline{from{opacity:0;translate:0 8px}to{opacity:1;translate:0 0}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.portfolio{transform:none}}

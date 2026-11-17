@@ -1,0 +1,32 @@
+:root { --navigation-offset: 100px; }
+.brand a { position: relative; }
+.brand a::after { content: ''; position: absolute; left: 0; bottom: -8px; width: 100%; height: 1px; background: #eee4d9; transform: scaleX(0); transform-origin: left; transition: transform 300ms var(--ease); }
+.brand a:hover::after, .brand a:focus-visible::after { transform: scaleX(1); }
+.header.header-ready { animation: none; }
+.header.is-floating {
+  position: fixed; z-index: 30; inset: 0 0 auto;
+  padding: 16px max(5.5vw, calc((100vw - 1480px)/2));
+  background: #050707dc; backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid #b7a17d20;
+  transition: background 300ms, padding 300ms;
+}
+.header.is-floating .brand { gap: 26px; }
+.header.is-floating .wordmark { font-size: 29px; letter-spacing: -1px; }
+.header.is-floating .brand-divider { height: 21px; }
+.header.is-floating .brand-caption { font-size: 11px; letter-spacing: 2px; }
+.header.is-floating nav { gap: 46px; }
+.header.is-floating nav button { font-size: 12px; letter-spacing: 2px; padding: 9px 0; }
+#about-title, #aloeglow-title, #project-title, #gallery-title, #aloeglow { scroll-margin-top: var(--navigation-offset, 100px); }
+@media (max-width: 700px) {
+  :root { --navigation-offset: 135px; }
+  .header.is-floating { padding: 14px 24px 10px; gap: 16px; }
+  .header.is-floating .brand { gap: 15px; }
+  .header.is-floating .wordmark { font-size: 24px; }
+  .header.is-floating .brand-caption { font-size: 9px; letter-spacing: 1.4px; }
+  .header.is-floating nav { gap: 24px; }
+  .header.is-floating nav button { font-size: 10px; }
+  #about-title, #aloeglow-title, #project-title, #gallery-title, #aloeglow { scroll-margin-top: var(--navigation-offset, 135px); }
+}
+/* Include each heading's eyebrow when navigating beneath the floating header. */
+#about-title, #aloeglow-title { scroll-margin-top: calc(var(--navigation-offset, 100px) + 55px); }
+#project-title { scroll-margin-top: calc(var(--navigation-offset, 100px) + 35px); }

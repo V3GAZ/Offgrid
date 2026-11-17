@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080706">
+  <meta name="description" content="OFFGRID. — Creative Lab. Creative strategy, brand experiences & digital campaigns.">
+  <title>OFFGRID. — Creative Lab</title>
+  <link rel="preload" href="assets/dm-sans-400.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="projects.css">
+  <link rel="stylesheet" href="navigation.css">
+  <link rel="stylesheet" href="finish.css">
+  <link rel="stylesheet" href="entry.css">
+  <script src="entry.js" defer></script>
+  <script src="app.js" defer></script>
+  <script src="projects.js" defer></script>
+  <script src="navigation.js" defer></script>
+  <script src="finish.js" defer></script>
+  <script src="back.js" defer></script>
+</head>
+<body>
+  <dialog id="entry-screen" aria-labelledby="entry-title" aria-describedby="entry-subtitle">
+    <div class="entry-content"><h2 id="entry-title">OFFGRID.</h2><p id="entry-subtitle">CREATIVE LAB</p><button id="enter-portfolio" autofocus>PORTFOLIO BETRETEN <span aria-hidden="true">↗</span></button></div>
+  </dialog>
+  <main>
+  <section id="top" class="hero" aria-label="OFFGRID Creative Lab">
+    <div class="backdrop" aria-hidden="true"></div>
+    <div class="composition">
+      <header class="header">
+        <div class="brand">
+          <a class="wordmark" href="#top" aria-label="OFFGRID – zurück nach oben">OFFGRID.</a>
+          <span class="brand-divider" aria-hidden="true"></span>
+          <a class="brand-caption" href="#about">CREATIVE LAB</a>
+        </div>
+        <nav aria-label="Main navigation">
+          <button data-panel="work">WORK</button>
+          <button data-panel="about">ABOUT</button>
+          <button data-contact>CONTACT</button>
+        </nav>
+      </header>
+      <section class="copy" aria-labelledby="headline">
+        <h1 id="headline"><span>NOT</span><span>MADE</span><span>TO <em>FIT.</em></span></h1>
+        <p class="services">CREATIVE STRATEGY,<br>BRAND EXPERIENCES<br>&amp; DIGITAL CAMPAIGNS.</p>
+        <button class="explore" data-panel="work"><span>EXPLORE PORTFOLIO</span><svg viewBox="0 0 32 24" aria-hidden="true"><path d="M1 12h27M20 4l8 8-8 8"/></svg></button>
+      </section>
+      <div class="portfolio-arrival">
+        <button class="portfolio" data-panel="work" aria-label="Explore the OFFGRID portfolio">
+          <img src="assets/portfolio.png" width="1596" height="985" alt="Black OFFGRID portfolio with the original Portfolio and WKS-Marketing lettering, held in a hand" fetchpriority="high" draggable="false">
+        </button>
+      </div>
+      <button class="scroll-cue" data-panel="work" aria-label="Open portfolio preview"><span>SCROLL</span><svg viewBox="0 0 28 18" aria-hidden="true"><path d="m3 3 11 11L25 3"/></svg></button>
+    </div>
+  </section>
+  <section class="about-section" id="about" aria-labelledby="about-title">
+    <div class="section-shell about-layout">
+      <div class="about-heading"><p class="section-kicker">ABOUT US</p><h2 id="about-title" tabindex="-1">A CREATIVE<br>MARKETING LAB.</h2></div>
+      <div class="about-copy"><p>OFFGRID ist das Creative Marketing Lab der WKS-Marketinggruppe. Im Rahmen unserer Weiterbildung zum staatlich geprüften Betriebswirt verbinden wir strategisches Marketing mit kreativem Design und digitaler Umsetzung.</p></div>
+    </div>
+  </section>
+
+  <div class="aloeglow-stage">
+  <section class="spotlight" id="aloeglow" aria-labelledby="aloeglow-title">
+    <div class="spotlight-teaser section-shell">
+      <div class="teaser-brand"><p class="section-kicker">SPOTLIGHT</p><h2 id="aloeglow-title" tabindex="-1">ALOEGLOW.</h2></div>
+      <p class="teaser-subtitle">Von der Idee zur Marke.</p>
+      <button class="outline-action" id="discover-project" aria-expanded="false" aria-controls="project-details"><span>PROJEKT ENTDECKEN</span><span aria-hidden="true">↓</span></button>
+    </div>
+  </section>
+
+  <section class="project-details" id="project-details" aria-labelledby="project-title" aria-hidden="true" inert>
+    <div class="project-clip"><div class="section-shell project-content">
+      <div class="project-heading">
+        <div><p class="section-kicker">ALOE GLOW / DAS PROJEKT</p><h2 id="project-title" tabindex="-1">VON DER IDEE ZUR MARKE.</h2></div>
+        <p>AloeGlow ist eine fiktive Naturkosmetikmarke, für die wir im Rahmen unserer Marketing-Weiterbildung eine ganzheitliche Kampagne entwickelt haben – von der Markenidee bis zur digitalen Umsetzung.</p>
+      </div>
+      <div class="project-grid">
+        <a class="project-card" id="website-card" href="https://v3gaz.github.io/AloeGlow/" target="_blank" rel="noopener noreferrer" aria-label="AloeGlow-Website in einem neuen Tab öffnen">
+          <div class="card-image"><img src="assets/aloeglow-website-detail.webp" width="1672" height="941" alt="AloeGlow-Website im dunklen Safari-Fenster" loading="lazy"></div>
+          <div class="card-copy"><p class="card-index">01 / DIGITAL</p><h3 class="card-title">WEBSITE</h3><p class="card-description">Die digitale Markenwelt entdecken.</p><span class="card-action">LIVE ANSEHEN <span class="card-arrow" aria-hidden="true">↗</span></span></div>
+        </a>
+        <button class="project-card" id="videos-card" aria-expanded="false" aria-controls="video-gallery">
+          <span class="card-image"><img src="assets/aloeglow-videos-detail.webp" width="1672" height="941" alt="Schwarzer Halloween-Kürbis mit giftgrünem Licht und Rauch" loading="lazy"></span>
+          <span class="card-copy"><span class="card-index">02 / MOTION</span><span class="card-title">VIDEOS</span><span class="card-description">Sechs Filme. Eine Markenwelt.</span><span class="card-action">FILME ENTDECKEN <svg class="card-arrow card-play" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10.5"/><path d="M9.5 7.5v9L17 12Z"/></svg></span></span>
+        </button>
+        <button class="project-card" id="extras-card" aria-haspopup="dialog" aria-controls="brochure-dialog">
+          <span class="card-image"><img src="assets/aloeglow-extras-detail.webp" width="1752" height="897" alt="Dreiteilige AloeGlow-Broschüre mit Markenmotiv und Pflegeprodukt" loading="lazy"></span>
+          <span class="card-copy"><span class="card-index">03 / CREATIVE LAB</span><span class="card-title">EXTRAS</span><span class="card-description">Weitere Ideen, Designs und kreative Einblicke.</span><span class="card-action">EXTRAS ENTDECKEN <span class="card-arrow" aria-hidden="true">↗</span></span></span>
+        </button>
+      </div>
+
+      <section class="video-gallery" id="video-gallery" aria-labelledby="gallery-title" aria-hidden="true" inert>
+        <div class="video-gallery-inner"><div class="video-gallery-content">
+          <header class="gallery-heading"><h3 id="gallery-title" tabindex="-1">EINE MARKENWELT. SECHS FILME.</h3><button class="gallery-close">Galerie schließen <span aria-hidden="true">×</span></button></header>
+          <div class="video-grid">
+            <article class="film"><div class="film-media"><video class="film-player" id="brand-film" poster="assets/brand-film-poster.webp" controls playsinline preload="none" data-src="https://v3gaz.github.io/AloeGlow/assets/main-film.mp4" aria-label="AloeGlow Markenfilm"></video><img class="film-poster" src="assets/brand-film-poster.webp" alt="" aria-hidden="true"><button class="film-start" aria-label="Markenfilm abspielen"><span aria-hidden="true">▶</span></button></div><div class="film-caption"><h4>01 / Markenfilm</h4><button class="fullscreen" data-video="brand-film">Vollbild ↗</button></div><p class="video-status" hidden></p></article>
+            <article class="film"><div class="film-media"><video class="film-player" id="brand-reel" poster="assets/brand-reel-poster.webp" controls playsinline preload="none" data-src="https://v3gaz.github.io/AloeGlow/assets/pamela-reel.mp4" aria-label="AloeGlow Reel – Kooperationsidee"></video><img class="film-poster" src="assets/brand-reel-poster.webp" alt="" aria-hidden="true"><button class="film-start" aria-label="Reel abspielen"><span aria-hidden="true">▶</span></button></div><div class="film-caption"><h4>02 / Reel 2</h4><button class="fullscreen" data-video="brand-reel">Vollbild ↗</button></div><p class="video-status" hidden></p></article>
+            <article class="film"><div class="film-media"><video class="film-player" id="reel-1" poster="assets/reel-1-poster.webp" controls playsinline preload="none" data-src="assets/videos/reel-1.mp4" aria-label="Video: Reel 1"></video><img class="film-poster" src="assets/reel-1-poster.webp" alt="" aria-hidden="true"><button class="film-start" aria-label="Reel 1 abspielen"><span aria-hidden="true">▶</span></button></div><div class="film-caption"><h4>03 / Reel 1</h4><button class="fullscreen" data-video="reel-1">Vollbild ↗</button></div><p class="video-status" hidden></p></article>
+            <article class="film"><div class="film-media"><video class="film-player" id="instagram-post-1" poster="assets/instagram-post-1-poster.webp" controls playsinline preload="none" data-src="assets/videos/instagram-post-1.mp4" aria-label="Video: Marketingvideo 1"></video><img class="film-poster" src="assets/instagram-post-1-poster.webp" alt="" aria-hidden="true"><button class="film-start" aria-label="Marketingvideo 1 abspielen"><span aria-hidden="true">▶</span></button></div><div class="film-caption"><h4>04 / Marketingvideo 1</h4><button class="fullscreen" data-video="instagram-post-1">Vollbild ↗</button></div><p class="video-status" hidden></p></article>
+
+<article class="film"><div class="film-media"><video class="film-player" id="werbespot" poster="assets/werbespot-poster.webp" playsinline preload="none" data-src="assets/videos/werbespot.mp4" aria-label="Werbespot"></video><img class="film-poster" src="assets/werbespot-poster.webp" alt="" aria-hidden="true"><button class="film-start" aria-label="Werbespot abspielen"><span aria-hidden="true">▶</span></button></div><div class="film-caption"><h4>05 / Werbespot</h4><button class="fullscreen" data-video="werbespot">Vollbild ↗</button></div><p class="video-status" hidden></p></article><article class="film"><div class="film-media"><video class="film-player" id="marketing-1" poster="assets/marketing-1-poster.webp" playsinline preload="none" data-src="assets/videos/marketing-1.mp4" aria-label="Marketingvideo 2"></video><img class="film-poster" src="assets/marketing-1-poster.webp" alt="" aria-hidden="true"><button class="film-start" aria-label="Marketingvideo 2 abspielen"><span aria-hidden="true">▶</span></button></div><div class="film-caption"><h4>06 / Marketingvideo 2</h4><button class="fullscreen" data-video="marketing-1">Vollbild ↗</button></div><p class="video-status" hidden></p></article>          </div>
+        </div></div>
+      </section>
+      <button class="collapse-project">Projekt einklappen <span aria-hidden="true">↑</span></button>
+    </div></div>
+  </section>
+
+
+  </div>
+
+  <section class="archive-teaser" id="archive" aria-labelledby="archive-title">
+    <div class="archive-content section-shell">
+      <div class="archive-line"><span class="archive-light" aria-hidden="true"></span><h2 id="archive-title"><span>PROJECT</span> <em>ARCHIVE</em></h2><p class="archive-soon">COMING SOON <span aria-hidden="true">—</span> <span class="archive-maybe">*MAYBE.</span></p></div>
+      <button class="outline-action archive-access" aria-haspopup="dialog" aria-controls="archive-password"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V6a4 4 0 0 1 8 0v4M12 14v3"/></svg><span>PASSWORTGESCHÜTZT</span><span aria-hidden="true">↗</span></button>
+    </div>
+  </section>
+  <div class="closing-sections">
+    <section class="expertise section-shell" aria-labelledby="expertise-title">
+      <div class="expertise-copy"><p class="section-kicker">OUR EXPERTISE</p><h2 id="expertise-title">CREATIVE EXPERTISE</h2><p>Strategie, Design, Content und digitale Lösungen –<br class="desktop-break"> maßgeschneidert für moderne Marken.</p><span class="light-rule" aria-hidden="true"></span></div>
+      <ul class="expertise-list">
+        <li><svg viewBox="0 0 40 40" aria-hidden="true"><path d="m5 15 15-7 15 7-15 7Zm0 7 15 7 15-7M5 29l15 7 15-7"/></svg><span>Strategie</span></li>
+        <li><svg viewBox="0 0 40 40" aria-hidden="true"><path d="m7 33 7-22L29 5l6 6-6 15-22 7Zm0 0 13-13M25 10l5 5"/><circle cx="22" cy="18" r="3"/></svg><span>Design</span></li>
+        <li><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="15" cy="12" r="6"/><path d="M3 34v-4a12 12 0 0 1 24 0v4M27 6a6 6 0 0 1 0 12m4 5a10 10 0 0 1 6 9v2"/></svg><span>Social Media</span></li>
+        <li><svg viewBox="0 0 40 40" aria-hidden="true"><rect x="7" y="7" width="26" height="22" rx="1"/><path d="M2 34h36M15 29v5m10-5v5"/></svg><span>Digital</span></li>
+      </ul>
+    </section>
+    <section class="contact-section section-shell" id="contact" aria-labelledby="contact-title">
+      <div><p class="section-kicker">CONTACT</p><h2 id="contact-title" tabindex="-1">LET’S WORK TOGETHER</h2><p class="contact-description">Du hast ein Projekt, eine Idee oder möchtest dich mit uns austauschen? Lass uns sprechen.</p><button class="team-link" aria-haspopup="dialog" aria-controls="team-dialog">PROJEKTTEAM <span aria-hidden="true">↗</span></button></div>
+      <div class="contact-action"><button class="outline-action" id="contact-action" disabled aria-describedby="contact-pending">KONTAKT AUFNEHMEN <span aria-hidden="true">↗</span></button><p id="contact-pending">Kontakt-E-Mail folgt.</p></div>
+    </section>
+    <footer class="site-footer section-shell">
+      <div class="footer-top"><a class="footer-wordmark" href="#top">OFFGRID.</a><span class="footer-label">WKS – MARKETING</span><nav aria-label="Footer"><a href="#aloeglow">WORK</a><a href="#about">ABOUT</a><a href="#contact">CONTACT</a></nav></div>
+      <div class="footer-bottom">
+        <div class="footer-identity"><p>Portfolio unserer Marketing-Weiterbildungsgruppe.</p><p class="footer-disclaimer">Keine offizielle Website der Wilhelm-Knapp-Schule.</p></div>
+        <div class="footer-location" aria-label="Schulstandort"><p>Wilhelm-Knapp-Schule<br>Frankfurter Straße 39<br>35781 Weilburg</p><a class="school-link" href="https://www.wilhelm-knapp-schule.de/" target="_blank" rel="noopener noreferrer" aria-label="Offizielle Website der Wilhelm-Knapp-Schule in einem neuen Tab öffnen">WKS-Schulwebsite <span aria-hidden="true">↗</span></a></div>
+        <div class="legal-links" aria-label="Rechtliches"><button data-legal="imprint">Impressum</button><button data-legal="privacy">Datenschutz</button></div>
+      </div>
+    </footer>
+  </div>
+
+  </main>
+  <dialog aria-labelledby="panel-title" aria-describedby="panel-copy">
+    <button class="close" aria-label="Close preview" autofocus>×</button>
+    <p class="panel-eyebrow">OFFGRID. — CREATIVE LAB</p>
+    <h2 id="panel-title">Portfolio</h2>
+    <p id="panel-copy"></p>
+    <button class="panel-back">BACK TO OFFGRID <span aria-hidden="true">↗</span></button>
+  </dialog>
+  <dialog class="brochure-dialog extras-dialog" id="brochure-dialog" aria-labelledby="brochure-title">
+    <button class="close" aria-label="Extras schließen" autofocus>×</button>
+    <p class="section-kicker">ALOE GLOW / CREATIVE LAB</p>
+    <h2 id="brochure-title">AloeGlow – Behind the Brand.</h2>
+    <div class="extras-gallery">
+      <article class="extra-item"><div class="extra-preview"><img src="assets/aloeglow-extras-detail.webp" width="1752" height="897" alt="Die dreiteilige AloeGlow-Broschüre in der Detailansicht"></div><h3>Broschüre</h3><p>Die AloeGlow-Markenwelt im Printdesign.</p></article>
+<article class="extra-item"><div class="extra-preview"><img src="assets/product-explode.webp" alt="Produktvisual 1" loading="lazy"></div><h3>Produktvisual 1</h3></article>
+<article class="extra-item"><div class="extra-preview"><img src="assets/product-hero.webp" alt="Produktvisual 2" loading="lazy"></div><h3>Produktvisual 2</h3></article>
+<article class="extra-item"><div class="extra-preview"><img src="assets/product-model.webp" alt="Produktvisual 3" loading="lazy"></div><h3>Produktvisual 3</h3></article>
+    </div>
+  </dialog>
+  <dialog class="team-dialog" id="team-dialog" aria-labelledby="team-title">
+    <button class="close" data-close aria-label="Projektteam schließen" autofocus>×</button>
+    <h2 id="team-title">PROJEKTTEAM</h2>
+    <div class="team-teacher"><h3>Lehrerin</h3><p>Frau Schwieger</p></div>
+    <div class="team-students"><h3>Studierende</h3><ul><li>Till</li><li>Max</li><li>Robin</li><li>Merle</li><li>Kolja</li><li>Tobias</li><li>Tom</li><li>George</li><li>Sophie</li><li>Erik</li></ul></div>
+  </dialog>
+
+  <dialog class="access-dialog" id="archive-password" aria-labelledby="access-title">
+    <button class="close" aria-label="Passwortabfrage schließen" data-close>×</button>
+    <p class="section-kicker">OFFGRID / PROJECT ARCHIVE</p><h2 id="access-title">Zugang zum Archiv.</h2>
+    <form id="archive-form"><label for="archive-password-input">Passwort</label><input id="archive-password-input" type="password" autocomplete="current-password" required aria-describedby="password-error"><p id="password-error" class="form-error" aria-live="polite"></p><button class="outline-action" type="submit">ARCHIV ÖFFNEN <span aria-hidden="true">↗</span></button></form>
+  </dialog>
+  <dialog class="archive-view" id="archive-view" aria-label="OFFGRID Projektarchiv">
+    <div class="archive-view-header"><span>OFFGRID.</span><button data-close aria-label="Archiv schließen">ZURÜCK <span aria-hidden="true">×</span></button></div>
+    <div class="folder-rack"><button class="archive-folder" style="--folder:0;--layer:5" aria-label="Ordner 01, leer" aria-pressed="false"><svg class="folder-shape" viewBox="0 0 250 900" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="edge-0" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#6f4e37"/><stop offset=".07" stop-color="#edd1b0"/><stop offset=".16" stop-color="#39291f"/><stop offset=".87" stop-color="#261d17"/><stop offset="1" stop-color="#bc8d66"/></linearGradient><linearGradient id="surface-0" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#1e1813"/><stop offset=".5" stop-color="#0d0d0b"/><stop offset="1" stop-color="#060706"/></linearGradient></defs><path d="M12 3H210Q224 3 224 20V96Q224 108 237 114Q248 119 248 132V208Q248 222 237 226Q224 230 224 244V899H4V17Q4 3 12 3Z" fill="url(#edge-0)" stroke="#a88b6e" stroke-width="1.5"/><path d="M16 29H205V899H16Z" fill="url(#surface-0)"/></svg><span class="folder-number">01</span></button><button class="archive-folder" style="--folder:1;--layer:4" aria-label="Ordner 02, leer" aria-pressed="false"><svg class="folder-shape" viewBox="0 0 250 900" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="edge-1" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#6f4e37"/><stop offset=".07" stop-color="#edd1b0"/><stop offset=".16" stop-color="#39291f"/><stop offset=".87" stop-color="#261d17"/><stop offset="1" stop-color="#bc8d66"/></linearGradient><linearGradient id="surface-1" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#1e1813"/><stop offset=".5" stop-color="#0d0d0b"/><stop offset="1" stop-color="#060706"/></linearGradient></defs><path d="M12 3H210Q224 3 224 20V96Q224 108 237 114Q248 119 248 132V208Q248 222 237 226Q224 230 224 244V899H4V17Q4 3 12 3Z" fill="url(#edge-1)" stroke="#a88b6e" stroke-width="1.5"/><path d="M16 29H205V899H16Z" fill="url(#surface-1)"/></svg><span class="folder-number">02</span></button><button class="archive-folder" style="--folder:2;--layer:3" aria-label="Ordner 03, leer" aria-pressed="false"><svg class="folder-shape" viewBox="0 0 250 900" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="edge-2" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#6f4e37"/><stop offset=".07" stop-color="#edd1b0"/><stop offset=".16" stop-color="#39291f"/><stop offset=".87" stop-color="#261d17"/><stop offset="1" stop-color="#bc8d66"/></linearGradient><linearGradient id="surface-2" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#1e1813"/><stop offset=".5" stop-color="#0d0d0b"/><stop offset="1" stop-color="#060706"/></linearGradient></defs><path d="M12 3H210Q224 3 224 20V96Q224 108 237 114Q248 119 248 132V208Q248 222 237 226Q224 230 224 244V899H4V17Q4 3 12 3Z" fill="url(#edge-2)" stroke="#a88b6e" stroke-width="1.5"/><path d="M16 29H205V899H16Z" fill="url(#surface-2)"/></svg><span class="folder-number">03</span></button><button class="archive-folder" style="--folder:3;--layer:2" aria-label="Ordner 04, leer" aria-pressed="false"><svg class="folder-shape" viewBox="0 0 250 900" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="edge-3" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#6f4e37"/><stop offset=".07" stop-color="#edd1b0"/><stop offset=".16" stop-color="#39291f"/><stop offset=".87" stop-color="#261d17"/><stop offset="1" stop-color="#bc8d66"/></linearGradient><linearGradient id="surface-3" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#1e1813"/><stop offset=".5" stop-color="#0d0d0b"/><stop offset="1" stop-color="#060706"/></linearGradient></defs><path d="M12 3H210Q224 3 224 20V96Q224 108 237 114Q248 119 248 132V208Q248 222 237 226Q224 230 224 244V899H4V17Q4 3 12 3Z" fill="url(#edge-3)" stroke="#a88b6e" stroke-width="1.5"/><path d="M16 29H205V899H16Z" fill="url(#surface-3)"/></svg><span class="folder-number">04</span></button><button class="archive-folder" style="--folder:4;--layer:1" aria-label="Ordner 05, leer" aria-pressed="false"><svg class="folder-shape" viewBox="0 0 250 900" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="edge-4" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#6f4e37"/><stop offset=".07" stop-color="#edd1b0"/><stop offset=".16" stop-color="#39291f"/><stop offset=".87" stop-color="#261d17"/><stop offset="1" stop-color="#bc8d66"/></linearGradient><linearGradient id="surface-4" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#1e1813"/><stop offset=".5" stop-color="#0d0d0b"/><stop offset="1" stop-color="#060706"/></linearGradient></defs><path d="M12 3H210Q224 3 224 20V96Q224 108 237 114Q248 119 248 132V208Q248 222 237 226Q224 230 224 244V899H4V17Q4 3 12 3Z" fill="url(#edge-4)" stroke="#a88b6e" stroke-width="1.5"/><path d="M16 29H205V899H16Z" fill="url(#surface-4)"/></svg><span class="folder-number">05</span></button><div class="archive-cover" aria-hidden="true"><svg class="folder-shape" viewBox="0 0 250 900" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="edge-cover" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#6f4e37"/><stop offset=".07" stop-color="#edd1b0"/><stop offset=".16" stop-color="#39291f"/><stop offset=".87" stop-color="#261d17"/><stop offset="1" stop-color="#bc8d66"/></linearGradient><linearGradient id="surface-cover" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#1e1813"/><stop offset=".5" stop-color="#0d0d0b"/><stop offset="1" stop-color="#060706"/></linearGradient></defs><path d="M12 3H210Q224 3 224 20V96Q224 108 237 114Q248 119 248 132V208Q248 222 237 226Q224 230 224 244V899H4V17Q4 3 12 3Z" fill="url(#edge-cover)" stroke="#a88b6e" stroke-width="1.5"/><path d="M16 29H205V899H16Z" fill="url(#surface-cover)"/></svg><span>OFFGRID.</span></div></div>
+  </dialog>
+  <dialog class="legal-dialog" id="legal-dialog" aria-labelledby="legal-title">
+    <button class="close" data-close aria-label="Hinweis schließen">×</button><p class="section-kicker">OFFGRID / WKS – MARKETING</p><h2 id="legal-title"></h2><div id="legal-copy"></div>
+  </dialog>
+
+</body>
+</html>
