@@ -190,3 +190,13 @@
 .spotlight-teaser .outline-action { margin-left:auto; align-self:flex-end; background:#050606aa; font-size:12px; }
 .video-close { font-size:11px; color:#d8bf93; padding:6px; }.film.is-preview .video-close { display:none; }
 @media(max-width:700px){.spotlight-teaser { min-height:360px; padding:26px; flex-direction:column; align-items:flex-start; gap:14px; background-image:linear-gradient(#050606 30%,#05060600 60%),url('assets/spotlight-a.webp');background-size:auto,auto 200px; background-position:center,70% 115px; background-repeat:no-repeat; background-color:#050606; }.spotlight-teaser h2 {font-size:30px}.teaser-subtitle{border:0;padding:0;margin:0;max-width:160px}.spotlight-teaser .outline-action{margin: auto 0 0;align-self:flex-start;font-size:10px}.spotlight-teaser .section-kicker{font-size:12px}.film-caption{flex-wrap:wrap}}
+/* Crop only the website preview's outer frame and macOS menu strip. */
+#website-card .card-image img { object-fit:cover; transform:scale(1.08) translateY(-1.5%); }
+.film-wide { grid-column:1/-1; }
+.film-wide .film-media { height:clamp(220px,34vw,500px); aspect-ratio:auto; }
+.film-wide .film-player { aspect-ratio:auto; }
+.extra-preview button { display:block; width:100%; height:100%; padding:0; cursor:zoom-in; }
+.extra-image-dialog { width:min(1200px,calc(100vw - 32px)); max-width:none; max-height:calc(100dvh - 32px); padding:42px 24px 24px; overflow:auto; }
+.extra-image-dialog h2 { font:500 18px/1.4 Montserrat,sans-serif; margin:0 0 16px; }
+.extra-image-dialog>img { display:block; width:100%; height:min(72dvh,850px); object-fit:contain; }
+@media(max-width:700px){.film-wide .film-media{height:auto;aspect-ratio:16/9}.extra-image-dialog{padding:42px 14px 16px}}

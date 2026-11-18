@@ -18,3 +18,8 @@ html.entry-active { overflow:hidden; }
 .project-content::before { height:100%; max-height:650px; background-position:80% 15%; background-size:125% auto; opacity:.38; mask-image:linear-gradient(transparent,#000 18%,#000 50%,transparent 95%); }
 .archive-teaser::before { transform:scaleX(-1); background-position:25% 35%; background-size:120% auto; opacity:.52; mask-image:linear-gradient(transparent,#000 35%,#000 70%,transparent); }
 @media(max-width:700px){.project-content::before{max-height:1100px;background-size:auto 100%;background-position:75% center}.archive-teaser::before{background-size:auto 650px;background-position:20% 38%}}
+/* Smaller entry control; reserve its former height so logo placement stays fixed. */
+#enter-portfolio { width:max-content; max-width:100%; min-height:44px; padding:8px 12px; gap:14px; font-size:clamp(12px,.96vw,16px); }
+#enter-portfolio span { font-size:24px; line-height:1; }
+#entry-screen .entry-content::after { content:''; display:block; height:32px; }
+@media(max-width:700px){#enter-portfolio{width:max-content;max-width:100%;min-height:38px;padding:7px 10px;gap:10px}#enter-portfolio span{font-size:22px}#entry-screen .entry-content::after{height:38px}}

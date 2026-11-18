@@ -18,6 +18,7 @@
   <script src="navigation.js" defer></script>
   <script src="finish.js" defer></script>
   <script src="back.js" defer></script>
+  <script src="extra-images.js" defer></script>
 </head>
 <body>
   <dialog id="entry-screen" aria-labelledby="entry-title" aria-describedby="entry-subtitle">
@@ -81,7 +82,7 @@
         </a>
         <button class="project-card" id="videos-card" aria-expanded="false" aria-controls="video-gallery">
           <span class="card-image"><img src="assets/aloeglow-videos-detail.webp" width="1672" height="941" alt="Schwarzer Halloween-Kürbis mit giftgrünem Licht und Rauch" loading="lazy"></span>
-          <span class="card-copy"><span class="card-index">02 / MOTION</span><span class="card-title">VIDEOS</span><span class="card-description">Sechs Filme. Eine Markenwelt.</span><span class="card-action">FILME ENTDECKEN <svg class="card-arrow card-play" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10.5"/><path d="M9.5 7.5v9L17 12Z"/></svg></span></span>
+          <span class="card-copy"><span class="card-index">02 / MOTION</span><span class="card-title">VIDEOS</span><span class="card-description">Sieben Filme. Eine Markenwelt.</span><span class="card-action">FILME ENTDECKEN <svg class="card-arrow card-play" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10.5"/><path d="M9.5 7.5v9L17 12Z"/></svg></span></span>
         </button>
         <button class="project-card" id="extras-card" aria-haspopup="dialog" aria-controls="brochure-dialog">
           <span class="card-image"><img src="assets/aloeglow-extras-detail.webp" width="1752" height="897" alt="Dreiteilige AloeGlow-Broschüre mit Markenmotiv und Pflegeprodukt" loading="lazy"></span>
@@ -91,14 +92,14 @@
 
       <section class="video-gallery" id="video-gallery" aria-labelledby="gallery-title" aria-hidden="true" inert>
         <div class="video-gallery-inner"><div class="video-gallery-content">
-          <header class="gallery-heading"><h3 id="gallery-title" tabindex="-1">EINE MARKENWELT. SECHS FILME.</h3><button class="gallery-close">Galerie schließen <span aria-hidden="true">×</span></button></header>
+          <header class="gallery-heading"><h3 id="gallery-title" tabindex="-1">EINE MARKENWELT. SIEBEN FILME.</h3><button class="gallery-close">Galerie schließen <span aria-hidden="true">×</span></button></header>
           <div class="video-grid">
             <article class="film"><div class="film-media"><video class="film-player" id="brand-film" poster="assets/brand-film-poster.webp" controls playsinline preload="none" data-src="https://v3gaz.github.io/AloeGlow/assets/main-film.mp4" aria-label="AloeGlow Markenfilm"></video><img class="film-poster" src="assets/brand-film-poster.webp" alt="" aria-hidden="true"><button class="film-start" aria-label="Markenfilm abspielen"><span aria-hidden="true">▶</span></button></div><div class="film-caption"><h4>01 / Markenfilm</h4><button class="fullscreen" data-video="brand-film">Vollbild ↗</button></div><p class="video-status" hidden></p></article>
             <article class="film"><div class="film-media"><video class="film-player" id="brand-reel" poster="assets/brand-reel-poster.webp" controls playsinline preload="none" data-src="https://v3gaz.github.io/AloeGlow/assets/pamela-reel.mp4" aria-label="AloeGlow Reel – Kooperationsidee"></video><img class="film-poster" src="assets/brand-reel-poster.webp" alt="" aria-hidden="true"><button class="film-start" aria-label="Reel abspielen"><span aria-hidden="true">▶</span></button></div><div class="film-caption"><h4>02 / Reel 2</h4><button class="fullscreen" data-video="brand-reel">Vollbild ↗</button></div><p class="video-status" hidden></p></article>
             <article class="film"><div class="film-media"><video class="film-player" id="reel-1" poster="assets/reel-1-poster.webp" controls playsinline preload="none" data-src="assets/videos/reel-1.mp4" aria-label="Video: Reel 1"></video><img class="film-poster" src="assets/reel-1-poster.webp" alt="" aria-hidden="true"><button class="film-start" aria-label="Reel 1 abspielen"><span aria-hidden="true">▶</span></button></div><div class="film-caption"><h4>03 / Reel 1</h4><button class="fullscreen" data-video="reel-1">Vollbild ↗</button></div><p class="video-status" hidden></p></article>
             <article class="film"><div class="film-media"><video class="film-player" id="instagram-post-1" poster="assets/instagram-post-1-poster.webp" controls playsinline preload="none" data-src="assets/videos/instagram-post-1.mp4" aria-label="Video: Marketingvideo 1"></video><img class="film-poster" src="assets/instagram-post-1-poster.webp" alt="" aria-hidden="true"><button class="film-start" aria-label="Marketingvideo 1 abspielen"><span aria-hidden="true">▶</span></button></div><div class="film-caption"><h4>04 / Marketingvideo 1</h4><button class="fullscreen" data-video="instagram-post-1">Vollbild ↗</button></div><p class="video-status" hidden></p></article>
 
-<article class="film"><div class="film-media"><video class="film-player" id="werbespot" poster="assets/werbespot-poster.webp" playsinline preload="none" data-src="assets/videos/werbespot.mp4" aria-label="Werbespot"></video><img class="film-poster" src="assets/werbespot-poster.webp" alt="" aria-hidden="true"><button class="film-start" aria-label="Werbespot abspielen"><span aria-hidden="true">▶</span></button></div><div class="film-caption"><h4>05 / Werbespot</h4><button class="fullscreen" data-video="werbespot">Vollbild ↗</button></div><p class="video-status" hidden></p></article><article class="film"><div class="film-media"><video class="film-player" id="marketing-1" poster="assets/marketing-1-poster.webp" playsinline preload="none" data-src="assets/videos/marketing-1.mp4" aria-label="Marketingvideo 2"></video><img class="film-poster" src="assets/marketing-1-poster.webp" alt="" aria-hidden="true"><button class="film-start" aria-label="Marketingvideo 2 abspielen"><span aria-hidden="true">▶</span></button></div><div class="film-caption"><h4>06 / Marketingvideo 2</h4><button class="fullscreen" data-video="marketing-1">Vollbild ↗</button></div><p class="video-status" hidden></p></article>          </div>
+<article class="film"><div class="film-media"><video class="film-player" id="werbespot" poster="assets/werbespot-poster.webp" playsinline preload="none" data-src="assets/videos/werbespot.mp4" aria-label="Werbespot"></video><img class="film-poster" src="assets/werbespot-poster.webp" alt="" aria-hidden="true"><button class="film-start" aria-label="Werbespot abspielen"><span aria-hidden="true">▶</span></button></div><div class="film-caption"><h4>05 / Werbespot</h4><button class="fullscreen" data-video="werbespot">Vollbild ↗</button></div><p class="video-status" hidden></p></article><article class="film"><div class="film-media"><video class="film-player" id="marketing-1" poster="assets/marketing-1-poster.webp" playsinline preload="none" data-src="assets/videos/marketing-1.mp4" aria-label="Marketingvideo 2"></video><img class="film-poster" src="assets/marketing-1-poster.webp" alt="" aria-hidden="true"><button class="film-start" aria-label="Marketingvideo 2 abspielen"><span aria-hidden="true">▶</span></button></div><div class="film-caption"><h4>06 / Marketingvideo 2</h4><button class="fullscreen" data-video="marketing-1">Vollbild ↗</button></div><p class="video-status" hidden></p></article><article class="film film-wide"><div class="film-media"><video class="film-player" id="pamela-in-gefahr" poster="assets/pamela-in-gefahr-poster.webp" playsinline preload="none" data-src="assets/videos/pamela-in-gefahr.mp4" aria-label="Pamela in Gefahr"></video><img class="film-poster" src="assets/pamela-in-gefahr-poster.webp" alt="" aria-hidden="true"><button class="film-start" aria-label="Pamela in Gefahr abspielen"><span aria-hidden="true">▶</span></button></div><div class="film-caption"><h4>07 / PAMELA IN GEFAHR</h4><button class="fullscreen" data-video="pamela-in-gefahr">Vollbild ↗</button></div><p class="video-status" hidden></p></article>          </div>
         </div></div>
       </section>
       <button class="collapse-project">Projekt einklappen <span aria-hidden="true">↑</span></button>
@@ -126,12 +127,12 @@
     </section>
     <section class="contact-section section-shell" id="contact" aria-labelledby="contact-title">
       <div><p class="section-kicker">CONTACT</p><h2 id="contact-title" tabindex="-1">LET’S WORK TOGETHER</h2><p class="contact-description">Du hast ein Projekt, eine Idee oder möchtest dich mit uns austauschen? Lass uns sprechen.</p><button class="team-link" aria-haspopup="dialog" aria-controls="team-dialog">PROJEKTTEAM <span aria-hidden="true">↗</span></button></div>
-      <div class="contact-action"><button class="outline-action" id="contact-action" disabled aria-describedby="contact-pending">KONTAKT AUFNEHMEN <span aria-hidden="true">↗</span></button><p id="contact-pending">Kontakt-E-Mail folgt.</p></div>
+      <div class="contact-action"><button class="outline-action" id="contact-action" aria-haspopup="dialog" aria-controls="contact-dialog">KONTAKT AUFNEHMEN <span aria-hidden="true">↗</span></button></div>
     </section>
     <footer class="site-footer section-shell">
       <div class="footer-top"><a class="footer-wordmark" href="#top">OFFGRID.</a><span class="footer-label">WKS – MARKETING</span><nav aria-label="Footer"><a href="#aloeglow">WORK</a><a href="#about">ABOUT</a><a href="#contact">CONTACT</a></nav></div>
       <div class="footer-bottom">
-        <div class="footer-identity"><p>Portfolio unserer Marketing-Weiterbildungsgruppe.</p><p class="footer-disclaimer">Keine offizielle Website der Wilhelm-Knapp-Schule.</p></div>
+        <div class="footer-identity"><p>Portfolio unserer Marketing-Weiterbildungsgruppe.</p></div>
         <div class="footer-location" aria-label="Schulstandort"><p>Wilhelm-Knapp-Schule<br>Frankfurter Straße 39<br>35781 Weilburg</p><a class="school-link" href="https://www.wilhelm-knapp-schule.de/" target="_blank" rel="noopener noreferrer" aria-label="Offizielle Website der Wilhelm-Knapp-Schule in einem neuen Tab öffnen">WKS-Schulwebsite <span aria-hidden="true">↗</span></a></div>
         <div class="legal-links" aria-label="Rechtliches"><button data-legal="imprint">Impressum</button><button data-legal="privacy">Datenschutz</button></div>
       </div>
@@ -155,7 +156,7 @@
 <article class="extra-item"><div class="extra-preview"><img src="assets/product-explode.webp" alt="Produktvisual 1" loading="lazy"></div><h3>Produktvisual 1</h3></article>
 <article class="extra-item"><div class="extra-preview"><img src="assets/product-hero.webp" alt="Produktvisual 2" loading="lazy"></div><h3>Produktvisual 2</h3></article>
 <article class="extra-item"><div class="extra-preview"><img src="assets/product-model.webp" alt="Produktvisual 3" loading="lazy"></div><h3>Produktvisual 3</h3></article>
-    </div>
+<article class="extra-item"><div class="extra-preview"><img src="assets/extra-new-1.webp" width="1227" height="1282" alt="Pflegevisual" loading="lazy"></div><h3>Pflegevisual</h3></article><article class="extra-item"><div class="extra-preview"><img src="assets/extra-new-2.webp" width="1055" height="1491" alt="AloeGlow Poster" loading="lazy"></div><h3>AloeGlow Poster</h3></article><article class="extra-item"><div class="extra-preview"><img src="assets/extra-new-3.webp" width="1672" height="941" alt="Gentle Cleanser" loading="lazy"></div><h3>Gentle Cleanser</h3></article><article class="extra-item"><div class="extra-preview"><img src="assets/extra-new-4.webp" width="1672" height="941" alt="Face Serum" loading="lazy"></div><h3>Face Serum</h3></article><article class="extra-item"><div class="extra-preview"><img src="assets/extra-new-5.webp" width="1671" height="941" alt="Produktserie" loading="lazy"></div><h3>Produktserie</h3></article>    </div>
   </dialog>
   <dialog class="team-dialog" id="team-dialog" aria-labelledby="team-title">
     <button class="close" data-close aria-label="Projektteam schließen" autofocus>×</button>
@@ -177,5 +178,12 @@
     <button class="close" data-close aria-label="Hinweis schließen">×</button><p class="section-kicker">OFFGRID / WKS – MARKETING</p><h2 id="legal-title"></h2><div id="legal-copy"></div>
   </dialog>
 
+<dialog id="extra-image-dialog" class="extra-image-dialog" aria-labelledby="extra-image-title"><button class="close" aria-label="Bildvorschau schließen" autofocus>×</button><h2 id="extra-image-title"></h2><img alt=""></dialog>
+<dialog id="contact-dialog" class="contact-dialog" aria-labelledby="contact-dialog-title">
+  <p class="section-kicker" id="contact-dialog-title">OFFGRID / CONTACT</p>
+  <button class="close" aria-label="Kontakt schließen" autofocus>×</button>
+  <div class="contact-dialog-center"><p class="contact-address">alprazolam@offgrid.com</p><button class="contact-copy" type="button" aria-live="polite">KOPIEREN</button></div>
+  <p class="contact-note">* Tatsächliche Kontaktadresse folgt.</p>
+</dialog>
 </body>
 </html>

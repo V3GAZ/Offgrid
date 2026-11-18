@@ -54,13 +54,35 @@
     const title = document.querySelector('#contact-title');
     title.focus({ preventScroll: true }); title.scrollIntoView({ behavior: reduced.matches ? 'instant' : 'smooth', block: 'start' });
   });
-  // Add the approved address here when supplied; the CTA is deliberately inactive until then.
-  const contactEmail = '';
-  if (contactEmail) {
-    const button = document.querySelector('#contact-action');
-    button.disabled = false; document.querySelector('#contact-pending').hidden = true;
-    button.addEventListener('click', () => { location.href = 'mailto:' + contactEmail; });
-  }
+  const contactDialog = document.querySelector('#contact-dialog');
+  const contactTrigger = document.querySelector('#contact-action');
+  const copyButton = contactDialog.querySelector('.contact-copy');
+  let copyTimer;
+  contactTrigger.addEventListener('click', () => contactDialog.showModal());
+  contactDialog.querySelector('.close').addEventListener('click', () => contactDialog.close());
+  contactDialog.addEventListener('click', event => {
+    const r = contactDialog.getBoundingClientRect();
+    if (event.target === contactDialog && (event.clientX < r.left || event.clientX > r.right || event.clientY < r.top || event.clientY > r.bottom)) contactDialog.close();
+  });
+  contactDialog.addEventListener('close', () => {
+    clearTimeout(copyTimer); copyButton.textContent = 'KOPIEREN';
+    contactTrigger.focus({ preventScroll: true });
+  });
+  copyButton.addEventListener('click', async () => {
+    clearTimeout(copyTimer);
+    const address = contactDialog.querySelector('.contact-address').textContent;
+    let copied = false;
+    try { await navigator.clipboard.writeText(address); copied = true; } catch {
+      const field = document.createElement('textarea');
+      field.value = address; field.readOnly = true;
+      field.style.cssText = 'position:fixed;left:-9999px;top:0';
+      contactDialog.append(field); field.select();
+      try { copied = document.execCommand('copy'); } catch { /* Leave selectable address visible. */ }
+      field.remove(); copyButton.focus({ preventScroll: true });
+    }
+    copyButton.textContent = copied ? 'KOPIERT' : 'NICHT KOPIERT';
+    copyTimer = setTimeout(() => { copyButton.textContent = 'KOPIEREN'; }, 1800);
+  });
   const legal = document.querySelector('#legal-dialog');
   document.querySelectorAll('[data-legal]').forEach(button => button.addEventListener('click', () => {
     const imprint = button.dataset.legal === 'imprint';
